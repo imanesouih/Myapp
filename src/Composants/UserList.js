@@ -14,7 +14,7 @@ function UserList(){
         <div>
             <p>
                 <Link to="/add-user">
-                    <button>Add user</button>
+                <button className='btn btn-success my-3'>Add user +</button>
                 </Link>
             </p>
             <table>
@@ -27,6 +27,7 @@ function UserList(){
                     </tr>
                 </thead>
                      <tbody>
+                     
                     { users.map((user, index)=> {
                           return(
                            <tr key={index}>
@@ -47,7 +48,7 @@ function UserList(){
             </table>
 
 
-        </div>
+     </div>
     )
 }
 export default UserList
