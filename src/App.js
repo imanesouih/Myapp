@@ -1,8 +1,9 @@
 
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
-import UserList from './Composants/UserList';
-import AddUser from './Composants/AddUser';
-import UpdatUser from './Composants/UpdateUser';
+import UserList from './components/UserList';
+
+import AddUser from './components/User';
+import UpdateUser from './components/UpdateUser';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<UserList />}/>
         <Route path='/add-user' element={<AddUser />}/>
-        <Route path='/update-user/:id' element={<UpdatUser />}/>
+        <Route path='/update-user/:id' element={<AddUser />}/>
 
       </Routes>
       </BrowserRouter>

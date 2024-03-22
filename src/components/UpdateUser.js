@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux"
-import { updatUserAction } from "../Config/action"
+import { updatUserAction } from "../reducer/users/action"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react"
 
 
 function UpdateUser(){
     const{id} = useParams()
-    const user = useSelector(data=>data.users.find((u)=>u.id===parseInt(id)));
+    const user = useSelector((store)=>store.users.data.find((u)=>u.id===parseInt(id)));
     const[name, setName] = useState(user ? user.name : '');
     const[email, setEmail]= useState(user ? user.email : '');
     const dispatch = useDispatch();

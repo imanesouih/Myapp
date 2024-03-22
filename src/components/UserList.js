@@ -1,10 +1,10 @@
 import { useSelector , useDispatch} from "react-redux"
 import { Link } from "react-router-dom"
-import { deleteUserAction } from "../Config/action";
+import { deleteUserAction } from "../reducer/users/action";
 
 function UserList(){
 
-    const users=useSelector(data=>data.users);
+    const users=useSelector((store)=>store.users.data);
     const dispatch=useDispatch();
     const handleDelete = (id)=>{
         dispatch(deleteUserAction(id))
